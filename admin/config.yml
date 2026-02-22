@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: nickbelo/media-slider-dynamic
   branch: main
 
 media_folder: "images"
@@ -10,7 +11,7 @@ collections:
     label: Slides
     files:
       - file: slides.json
-        label: Slides
+        label: Slides Config
         name: slides
         format: json
         fields:
@@ -18,4 +19,7 @@ collections:
             label: Slides
             widget: list
             fields:
-              - {name: type, label: Type, widget: string}
+              - { name: type, label: Type, widget: select, options: ["image","video","youtube","website"] }
+              - { name: duration, label: Duration (ms), widget: number, required: false }
+              - { name: src, label: Source (image/video), widget: string, required: false }
+              - { name: url, label: URL (youtube/website), widget: string, required: false }

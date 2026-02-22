@@ -12,7 +12,7 @@ collections:
   - name: slides
     label: Slides
     files:
-      - file: slides.json
+      - file: content/slides.json
         label: Slides Config
         name: slides
         format: json

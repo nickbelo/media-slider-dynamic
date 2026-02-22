@@ -6,19 +6,16 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "slides"
-    label: "Slides"
+  - name: slides
+    label: Slides
     files:
-      - label: "Slides Config"
-        name: "slides"
-        file: "slides.json"
-        format: "json"
+      - file: slides.json
+        label: Slides
+        name: slides
+        format: json
         fields:
-          - label: "Slides"
-            name: "slides"
-            widget: "list"
+          - name: slides
+            label: Slides
+            widget: list
             fields:
-              - { label: "Type", name: "type", widget: "select", options: ["image","video","youtube","website"] }
-              - { label: "Duration (ms)", name: "duration", widget: "number", default: 5000, required: false }
-              - { label: "Source File (image/video)", name: "src", widget: "string", required: false }
-              - { label: "URL (youtube/website)", name: "url", widget: "string", required: false }
+              - {name: type, label: Type, widget: string}

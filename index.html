@@ -47,7 +47,7 @@ async function loadSlides() {
   const data = await res.json();
   const container = document.getElementById("slides");
 
-  data.forEach(item => {
+  data.slides.forEach(item => {
     const slide = document.createElement("div");
     slide.className = "swiper-slide";
     slide.dataset.duration = item.duration || 5000;
